@@ -1,27 +1,27 @@
 body {
-    background-color: lightgoldenrodyellow;
+  background-color: lightgoldenrodyellow;
 }
 h1 {
-    color: darkgreen;
+  color: darkgreen;
 }
 table {
-    text-align: center;
-    width : 90%;
-    height : 700px;
+  text-align: center;
+  width: 90%;
+  height: 700px;
 }
-th { 
-    text-align: center;
+th {
+  text-align: center;
 }
 tr {
-    text-align: right ;
+  text-align: right;
 }
-tr>*:first-child {
-    color:red;
+tr > *:first-child {
+  color: red;
 }
-tr>*:last-child {
-    color:blue;
+tr > *:last-child {
+  color: blue;
 }
 
-.holiday {
-    color :red;
+tr > .holiday {
+  color: red;
 }

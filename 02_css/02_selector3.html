@@ -119,9 +119,32 @@
       .box::after {
         content: "빨리";
       }
+
+      .content article {
+        height: 500px;
+        border: 5px solid blue;
+      }
+
+      #detail {
+        background-color: yellow;
+      }
     </style>
   </head>
   <body>
+    <section>
+      <!-- #은 호출하는 것인데 #뒤에 아무것도 없으면 현재페이지 새로고침됨. -->
+      <!-- #id를 선택하면 그 아이디 있는 곳으로 이동, 그래서 id는 한번만  -->
+      <a href="#detail">상세정보</a>
+      <a href="#review">후기</a>
+      <a href="#community">커뮤니티</a>
+    </section>
+    <section class="content">
+      <article id="detail">여기는 상세정보 내용</article>
+      <article id="review">여기는 후기 내용</article>
+      <article id="community">여기는 커뮤니티 내용</article>
+    </section>
+    <br /><br /><br />
+    <hr />
     <div class="div1">
       <span>div1</span>
     </div>
