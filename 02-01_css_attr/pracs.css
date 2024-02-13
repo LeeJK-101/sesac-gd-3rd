@@ -1,0 +1,9 @@
+span {
+  color: green;
+}
+.border-test {
+  width: 100px;
+  height: 100px;
+  border: solid deeppink;
+  border-width: 10px 20px 30px 40px;
+}
