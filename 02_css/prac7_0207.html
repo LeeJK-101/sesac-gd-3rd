@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>선택자 종합 실습</title>
-    <style>
-      form {
-        width: 400px;
-      }
-      /* hover */
 
-      /* focus */
-      textarea {
-        width: 100%;
-      }
-      /* checked */
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>실습 7 선택자 종합 실습</title>
+  <style>
+    form {
+      width: 400px;
+    }
+
+    /* hover */
+    textarea:hover {
+      background-color: rgba(255, 33, 33, 0.1);
+
+    }
+
+    h3:hover {
+      color: white;
+      background-color: black;
+    }
+
+    /* focus */
+    textarea {
+      width: 100%;
+    }
+
+    /* checked */
+    #red:checked + label[for="red"] {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+#yellow:checked + label[for="yellow"] {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+#blue:checked + label[for="blue"] {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
 
       /* active */
       button {
@@ -26,17 +53,34 @@
         border-radius: 10px;
         border: none;
       }
-    </style>
-  </head>
-  <body>
-    <h3>건의 사항을 적어주세요!</h3>
-    <!--  label - 명시적 방식: id와 for 맞추기 - 암시적 방식: label 내부에 input
+
+      button:active {
+        background-color: lightgrey;
+        color: #f96666;
+
+      }
+  </style>
+</head>
+
+<body>
+
+  <h3>건의 사항을 적어주세요!</h3>
+  <!--  label - 명시적 방식: id와 for 맞추기 - 암시적 방식: label 내부에 input
       작성 - checkbox 사용 시 명시적 방식으로 작성 -->
-    <form>
-      <textarea name="" id="" cols="30" rows="10">
-</textarea
-      
-      <button>제출</button>
-    </form>
-  </body>
+  <form>
+    <textarea id="text" cols="30" rows="10" placeholder="건의사항 🎈"></textarea>
+    <input type="checkbox" id="red" />
+    <label for="red"> 빨강</label>
+    <input type="checkbox" id="blue" />
+    <label for="blue"> 파랑</label>
+    <input type="checkbox" id="yellow" />
+    <label for="yellow"> 노랑</label>
+
+
+
+
+    <button>제출</button>
+  </form>
+</body>
+
 </html>
