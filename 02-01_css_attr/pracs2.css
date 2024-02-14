@@ -1,17 +1,16 @@
 body {
-    background-color: antiquewhite;
-    padding: 0px;
+  background-color: antiquewhite;
+  padding: 0px;
 }
-.calc-line-height{
-    color: white;
-    background-color: royalblue;
-    text-align: center;
-    width: calc(100vw/10);
-  height: calc(100vw/10);
-  line-height: calc(100vw/10);
-  margin: calc(90vw/2);
-
+.calc-line-height {
+  color: white;
+  background-color: royalblue;
   text-align: center;
-  vertical-align:middle;
-  
+  width: calc(100vw / 10);
+  height: calc(100vw / 10);
+  line-height: calc(100vw / 10);
+  margin: calc(90vw / 2);
+  /* margin: calc(50vh-5vw) auto 0 auto  <- 답*/
+  text-align: center;
+  vertical-align: middle;
 }

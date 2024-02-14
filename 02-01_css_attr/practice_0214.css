@@ -1,0 +1,30 @@
+.positon-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: bisque;
+}
+.item {
+  width: 100px;
+  height: 100px;
+}
+
+.i1 {
+  background-color: blueviolet;
+  position: relative;
+  left: 50px;
+  top: 30px;
+}
+.i2 {
+  background-color: aquamarine;
+  position: absolute;
+
+  right: 30px;
+  bottom: 100px;
+}
+.i3 {
+  background-color: plum;
+  position: fixed;
+  right: 100px;
+  top: 100px;
+}

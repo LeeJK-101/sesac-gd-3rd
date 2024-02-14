@@ -1,0 +1,40 @@
+body {
+  height: 2000px;
+}
+.product-info {
+  width: 100vw;
+  height: 400px;
+}
+.product-info-detail {
+  height: 600px;
+  background-color: blanchedalmond;
+}
+
+.fixed-tab {
+  line-height: 50px;
+  height: 50px;
+  background-color: lightpink;
+  position: sticky;
+  top: 0;
+}
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
+}
+.top-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  position: fixed;
+  background-color: deeppink;
+  color: white;
+  font-weight: 700;
+  right: 30px;
+  bottom: 30px;
+  text-align: center;
+  line-height: 80px;
+}
