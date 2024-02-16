@@ -1,0 +1,293 @@
+.container {
+  /* flex 기본 용어 */
+  /* 주축: main axis */
+  /* 교차축: cross-axis */
+
+  /* display: flex;는 자식 요소의 정렬 방법을 지정하는 속성 */
+  /* display: inline-flex; 속성도 있음 */
+  /* flex와 inline-flex의 차이 */
+  /* inline-flex는 거의 안 쓰이는 편 */
+  /* flex는 부모 요소가 수직으로 쌓임 block요소처럼 */
+  /* inline-flex는 부모 요소가 수평으로 쌓임 inline요소처럼  */
+
+  /* display : flex;는 기본적으로 자식 요소들이 왼쪽에서 오른쪽으로 쌓임*/
+  /* 즉, 주축의 기본 방향이 좌 -> 우 */
+  display: flex;
+  width: 100vw;
+  background-color: antiquewhite;
+  /* display: inline-flex; */
+
+  /* flex-direction: 주축의 방향 지정 */
+  /* flex-direction:  row; (defualt) */
+
+  /* row-reverse: 우 -> 좌로 자식 요소들이 쌓임 */
+  flex-direction: row-reverse;
+
+  /* column: 위 -> 아래로 자식 요소들이 쌓임 */
+  flex-direction: column;
+  /* column-reverse: 아래 -> 위로 자식 요소들이 쌓임 */
+  flex-direction: column-reverse;
+
+  flex-direction: row;
+  /* width: 350px;
+
+  flex-direction: column;
+  width: 350px; */
+
+  /* flex-wrap: nowrap | wrap | wrap-reverse 세개의 속성 값이 있다.
+  flex-wrap->
+  "flex 속성 사용시 컨테이너의 줄바꿈을 지정"*/
+  /* flex-wrap: nowrap; (defualt) */
+  /* flex-wrap: wrap;
+  flex-wrap: wrap-reverse; */
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  font: size 30px;
+  /* text-align: center; */
+  /* line-height: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item1 {
+  background-color: red;
+}
+
+.item2 {
+  background-color: orange;
+}
+
+.item3 {
+  background-color: yellow;
+}
+
+.item4 {
+  background-color: green;
+}
+
+.item5 {
+  background-color: blue;
+}
+
+.item5 {
+  background-color: purple;
+}
+
+.item6 {
+  background-color: deeppink;
+}
+
+.item7 {
+  background-color: pink;
+}
+
+.item8 {
+  background-color: lavenderblush;
+}
+
+/*
+.containers1 {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  background-color: palegoldenrod;
+}
+
+.containers2 {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: paleturquoise;
+}
+
+.containers3 {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: palegreen;
+}
+
+*/
+.containers4 {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  background-color: aliceblue;
+}
+
+.containers5 {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: aliceblue;
+}
+
+/* 아이템은 기본속성이 stretch임 */
+
+/* justify-content: 주축 item의 정렬 방법/ 배치 방법 */
+/* 
+ - justify-content: flex-start(defult) -> 아이템을 start 지점을 기준으로 나열
+ - justify-content: flex-end -> 아이템을 end 지점을 기준으로 나열
+ - justify-content: space-around -> 아이템들의 모든 여백을 동일하게 갖도록 함(양끝 여백의 단위가 1이라면, 아이템 사이의 여백 2)
+ - justify-content: space-evenly -> start부터 첫 아이템의 간격, 아이템 사이 간격, 마지막 아이템부터 end까지 모든 간격이 동일
+ - justify-content: space-between -> 처음과 마지막 아이템을 양 끝에 붙이고, 나머지 아이템 사이 간격을 동일하게 나눔
+ */
+
+.containers6 {
+  display: flex;
+  width: 100vw-30px;
+  background-color: antiquewhite;
+
+  flex-direction: column;
+  height: 100vh;
+  /* justify-content: flex-end;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  justify-content: space-between; */
+}
+
+/* 프로젝트시 body여백을 지워주는게 편하긴 함 */
+
+.containers7 {
+  display: flex;
+  width: 100vw-30px;
+  height: 300px;
+  background-color: antiquewhite;
+
+  flex-direction: column;
+  height: 100vh;
+
+  /* align-items: 교차축에 대해 item을 어떻게 배치할 것인가 */
+  /* 
+ - align-items: stretch; (defualt) -> container의 교차축을 모두 채우기 위해 늘림
+   -> 아이템의 높이/너비가 지정되지 않았을 때 자동으로 교차축을 채우기 위해 늘어남 
+ - align-items: flex-start; -> 교차축의 시작점으로 정렬
+   -> 아이템의 높이/너비가 지정되었을 때 자동으로 정렬됨
+ - align-items: flex-end; -> 교차축의 끝점으로 정렬
+ - align-items: center; -> 교차축의 중앙에 정렬
+ - align-items: baseline; -> 아이템을 텍스트의 베이스라인 기준으로 정렬
+ */
+  height: 300px;
+  align-items: stretch;
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: baseline;
+  align-items: center;
+  /* align-content -> 두 줄 이상에서 교차축 기준으로 아이템들의 정렬 방식*/
+  /* 조건 : flex-wrap: wrap 상태에서 아이템이 2줄 이상일 때 교차축 방향 설정 */
+  /* 
+ - align-content: stretch; ->교차축 방향으로 모두 차지하기 위해 늘어남
+ - align-content: flex-start; -> 교차축 방향으로 시작점으로 정렬
+ - align-content: flex-end; -> 교차축 방향으로 끝점으로 정렬
+ - align-content: center; -> 교차축 방향으로 중앙 정렬
+*/
+  width: 350px;
+  flex-wrap: wrap;
+}
+
+.containers8 {
+  width: 500px;
+  height: 500px;
+  background-color: beige;
+  display: flex;
+  flex-direction: row;
+  border: 10px solid black;
+}
+.containers9 {
+  width: 500px;
+  height: 500px;
+  background-color: papayawhip;
+  display: flex;
+  flex-direction: column; /* 주축을 가로로 설정 */
+  border: 10px solid black;
+}
+
+.containers10 {
+  width: 500px;
+  height: 500px;
+  background-color: palegoldenrod;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.containers11 {
+  width: 500px;
+  height: 500px;
+  background-color: skyblue;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.containers12 {
+  width: 500px;
+  height: 500px;
+  background-color: skyblue;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.containers13 {
+  width: 500px;
+  height: 500px;
+  background-color: skyblue;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.containers14 {
+  width: 100%;
+  height: 400px;
+  background-color: honeydew;
+  display: flex;
+  align-items: center;
+}
+
+.containers14 .itemx {
+  /* flex-basis: 200px; */
+  width: 50px;
+  height: 50px;
+}
+.containers14 .item1 {
+  order: 8;
+}
+
+.containers14 .item2 {
+  align-self: flex-start;
+}
+
+.containers14 .item3 {
+  flex-basis: 100px;
+}
+
+.containers14 .item4 {
+  order: 5;
+  flex-grow: 2;
+}
+
+.containers14 .item5 {
+  order: 2;
+  flex-grow: 1;
+}
+
+.containers14 .item6 {
+}
+
+.containers14 .item7 {
+}
+
+.containers14 .item8 {
+  order: 1;
+}

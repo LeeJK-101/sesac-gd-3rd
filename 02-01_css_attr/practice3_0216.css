@@ -1,0 +1,76 @@
+.container {
+  position: relative;
+  height: 250px;
+}
+.nemo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.item1 {
+  background-color: crimson;
+}
+.item2 {
+  top: 30px;
+  left: 30px;
+  background-color: orange;
+}
+.item3 {
+  top: 60px;
+  left: 60px;
+  background-color: gold;
+}
+
+.item4 {
+  background-color: crimson;
+  z-index: 40;
+}
+.item5 {
+  top: 30px;
+  left: 30px;
+  background-color: orange;
+}
+.item6 {
+  top: 60px;
+  left: 60px;
+  background-color: gold;
+  z-index: 30;
+}
+
+.bugcontainer {
+  position: relative;
+}
+.bug {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.circle1 {
+  background-color: rgb(43, 43, 255);
+}
+.circle2 {
+  background-color: rgb(135, 135, 255);
+}
+.circle3 {
+  background-color: rgb(163, 163, 255);
+}
+.circle4 {
+  background-color: rgb(184, 184, 255);
+}
+.circle5 {
+  background-color: rgb(217, 217, 255);
+}
+
+.eye-bg {
+  background-color: aliceblue;
+}
+.eye {
+  background-color: black;
+}
+.grass {
+  background-image: url("./img/grass.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
