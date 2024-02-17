@@ -14,6 +14,12 @@ ul {
   list-style: none;
 }
 
+li {
+  padding: 0 10px;
+  /* border: 1px solid black; */
+
+}
+
 h1 {
   text-align: center;
   color: green;
@@ -26,13 +32,29 @@ header {
   background-color: #ddd;
   padding: 0 20px;
   margin-bottom: 50px;
+  box-sizing: border-box;
 }
 
 /* TODO: header1 ~ 3까지 완성해주세요! */
 
 /* header1 */
+.header1 {
+  /* border: 1px solid black; */
+
+  display: flex;
+  justify-content: space-between;
+  
+  align-items: center;
+}
+
+.header1 .menus{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 
 /* header2 */
+
 .header2 .menus {
   /* height 100%를 주는 이유
     >> ul의 높이는 콘텐츠의 크기만큼 할당되어 있기 때문에
@@ -44,7 +66,55 @@ header {
     border:1px solid black; 으로 ul.menus가 어느정도를 차지하는지 확인해보고
     height:100%가 있을 때와 없을 때를 비교해보세요!
     */
+  display: flex;
   height: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* header3 */
+.header3 {
+  /* border: 1px solid black; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.header3 ul {  
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+}
+
+
+
+/* header4 */
+.header4 {
+  /* border: 1px solid black; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.logo{
+  padding: 0 10px 0 0;
+}
+.header4 div{
+  display: flex;
+
+}
+
+.header4 ul {  
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+
+}
+.header4 .member{
+  margin-right: -10px;
+}

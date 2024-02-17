@@ -117,11 +117,15 @@
 }
 
 #search:focus {
-  background-color: #c0c0c0;
+  outline: none;  
 }
 
-/* 정답코드 */
+#search:hover:not(input:focus) {
+  background-color: #b0b0b0;
+} 
 
+/* 정답코드 */
+/* 
 #search {
   height: 50px;
   background-color: #e6e6e6;
@@ -140,6 +144,6 @@
 /* hover 되었을 때 사용자가 클릭할 수 있거나 기능이 있다는 것을 인지 */
 /* 포커스가 되었을 때도 어두우면 입력할 때 잘 안보이기 때문에  */
 /* 입력시에 hover되거나 아닐 때 색이 변화하는 불상사를 피할 수 있음. */
-#search:hover:not(input:focus) {
+/* #search:hover:not(:focus) {
   background-color: #b0b0b0;
-}
+} */ */

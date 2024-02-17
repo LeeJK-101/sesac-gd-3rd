@@ -192,13 +192,13 @@
   flex-wrap: wrap;
 }
 
+/* flex-wrap실습 */
 .containers8 {
   width: 500px;
   height: 500px;
   background-color: beige;
   display: flex;
   flex-direction: row;
-  border: 10px solid black;
 }
 .containers9 {
   width: 500px;
@@ -206,7 +206,6 @@
   background-color: papayawhip;
   display: flex;
   flex-direction: column; /* 주축을 가로로 설정 */
-  border: 10px solid black;
 }
 
 .containers10 {
@@ -217,6 +216,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+align-content: center;
 }
 .containers11 {
   width: 500px;
@@ -224,28 +224,37 @@
   background-color: skyblue;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  align-content: center;
 }
 .containers12 {
   width: 500px;
   height: 500px;
-  background-color: skyblue;
+  background-color: cornsilk;
 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-content: space-between;
+  
 }
 
 .containers13 {
   width: 500px;
   height: 500px;
-  background-color: skyblue;
+  background-color: rosybrown;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  align-content: space-around;
+
 }
+
+
+
+
 
 .containers14 {
   width: 100%;
