@@ -1,0 +1,197 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    position: relative;
+
+    /* animation 사용 */
+    animation-name: my-ani;
+    animation-duration: 5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 2;
+    animation-timing-function: linear; duration timing-function delay iteration-count direction fill-mode;
+    }
+
+    @keyframes my-ani {
+    0% {
+    left: 0;
+    }
+    25% {
+    left: 200px;
+    }
+    50% {
+    left: 400px;
+    }
+    75% {
+    left: 200px;
+    }
+    100% {
+    left: 0;
+    }
+    }
+
+
+
+    .bounce-ball1{
+    width: 100px;
+    height:100px;
+    position: relative;
+    left:100px;
+    top: 0;
+    border-radius: 50%;
+    background-color: lightblue;
+
+    /* animation-name: bounce1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate -> 애니메이션이 더 자연스럽게 연결될 수 있도록 함. */
+
+    /* 단축 프로퍼티 */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: bounce1 1s ease-in infinite alternate;
+    }
+
+    /* alternate는 시작점이 바뀜. 연속 애니로 보이게 */
+
+    @keyframes bounce1{
+    /* to 끝나는 위치 */
+    to {
+    top:0px;
+    }
+    /* from 시작위치 */
+    from {
+    top:300px;
+    }
+    }
+
+    .bounce-ball2{
+    width:50px;
+    height: 50px;
+    background-color: lightcoral;
+    position:absolute;
+    border-radius: 50%;
+
+    animation-name: bounce2;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation: bounce2 2s infinite ;
+    }
+    /* from과 to가 다 있어야 함. */
+    @keyframes bounce2{
+    from, to{
+    bottom: 0;
+    animation-timing-function: ease-out;
+    /* 0px에서 정상 속도로 시작해, 천천히 속도를 줄이면서 300px이 됨 */
+    width:60px;
+    }
+
+    50% {
+    width: 100px;
+    bottom: 300px;
+    animation-timing-function: ease-in;
+    /* 300px에서 천천히 시작해, 0px로 가면서 정상 속도로 끝남 */
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .container{
+      margin-top: 700px;
+      width: 550px;
+      height: 550px;
+      background-color: beige;
+    }
+
+    .bounce-ball3{
+    width:50px;
+    height: 50px;
+    background-color: deeppink;
+    position:relative;
+    border-radius: 50%;
+
+    animation-name: bounce3;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    }
+    /* from과 to가 다 있어야 함. */
+    @keyframes bounce3{
+
+      0%   { left:0px; top:0px;}
+      25%  { left:500px; top:0px;}
+      50%  {left:500px; top:500px;}
+      75%  { left:0px; top:500px;}
+      100% { left:0px; top:0px;}
+    }
+
+
+/* 
+
+
+.circle{
+width: 100px;
+height: 100px;
+border-radius: 50%;
+position: relative;
+background: linear-gradient(45deg,yellow,orange,70%,orangered);
+box-shadow: -5px,5px,10px inset rgb(219,219,219,0.5);
+animation: ball 10s linear infinite;
+}
+
+@keyframes ball {
+    0% { transform: translate(0px, 0px); }
+    25% { transform: translate(calc(100vw - 100px), 0px); }
+    50% { transform: translate(calc(100vw - 100px), calc(100vh - 100px)); }
+    75% { transform: translate(0px, calc(100vh - 100px)); }
+    100% { transform: translate(0px, 0px); }
+      }
+ */
+
+
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, yellow, orange, 70%, orangered);
+        box-shadow: -5px 5px 10px inset rgba(219, 219, 219, 0.5);
+        animation: ball 10s linear infinite;
+        position: absolute; /* 위치를 상대적으로 설정합니다. */
+        top: 0; /* 시작 위치를 화면 상단에 설정합니다. */
+        left: 0; /* 시작 위치를 화면 왼쪽에 설정합니다. */
+    }
+    
+    @keyframes ball {
+        0% { top: 0; left: 0; } /* 시작 위치 */
+        25% { top: 0; left: calc(100vw - 100px); } /* 우측 상단으로 이동 */
+        50% { top: calc(100vh - 100px); left: calc(100vw - 100px); } /* 우측 하단으로 이동 */
+        75% { top: calc(100vh - 100px); left: 0; } /* 좌측 하단으로 이동 */
+        100% { top: 0; left: 0; } /* 다시 원래 위치로 돌아옴 */
+    } 
+    
+/*       
+h2{
+margin-top: 100vh-100px;
+}
+p{animation: slidein 3s infinite;
+
+}
+@keyframes slidein{
+from{
+margin-left :100%;
+width:300%}
+to{
+margin-left :0%;
+width:100%}
+} */
