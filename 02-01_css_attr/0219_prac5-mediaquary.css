@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+ul,
+ol {
+  list-style: none;
+  /* border: 1px solid black; */
+}
+
 header {
   width: 100%;
   height: 100px;
@@ -19,18 +25,22 @@ header .inner {
 }
 
 header .inner .logo {
-  line-height: 100px;
   position: absolute;
   /* i는 font-size로 크기 조정 */
   font-size: 50px;
+  line-height: 100px;
   color: aliceblue;
 }
 
-ul,
-ol {
-  list-style: none;
-  /* border: 1px solid black; */
+/* header .inner .menu <- 이 경우
+@mediaquery에서도 동일depth의 선택자를 사용할 것*/
+.menu {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 li {
   font-size: 24px;
   /* border: 1px solid black; */
@@ -38,14 +48,9 @@ li {
   font-weight: 700;
 }
 
-.menu {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .small-menu,
 .menu-bar {
+  /* display:none 자리차지 안하게 */
   display: none;
 }
 
@@ -56,6 +61,11 @@ li {
   align-items: center;
   padding: 20px 0;
   background-color: aliceblue;
+  cursor: pointer;
+}
+
+.small-menu li:hover {
+  background-color: gainsboro;
 }
 
 @media screen and (max-width: 768px) {
@@ -80,6 +90,7 @@ li {
   .menu {
     display: none;
   }
+
   header .inner .logo {
     position: absolute;
     top: 0;
