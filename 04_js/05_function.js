@@ -95,3 +95,22 @@ const userName = 'layla';
 hello('layla~!'); //'hello layla'를 alert창으로 띄움
 
 hello(userName); //'hello layla'를 alert창으로 띄움
+
+// 실습 과제
+// multifly 함수 만들기
+function multifly(num1, num2) {
+  console.log('num1:', num1);
+  console.log('num2:', num2);
+  return num1 * num2; // return 문 다음 코드는 실행하지 않음
+  //return 이후에는 무엇을 입력해도 출력되지 않음.
+}
+
+console.log(multifly(7, 3)); //21
+console.log(multifly(4, 10)); //40
+
+// square 함수 만들기
+function square(num) {
+  return num ** 2;
+}
+
+console.log(square(4));
