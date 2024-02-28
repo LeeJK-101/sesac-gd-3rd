@@ -75,7 +75,7 @@
     <script>
       function diceNumber(num1, num2) {
         // TODO: 조건을 만족하는 diceNumber 함수를 완성해주세요.
-        if (typeof num1 == 'number' && typeof num2 == 'number') {
+        if (typeof num1 === 'number' && typeof num2 === 'number') {
           if ((num1 + num2) % 4 === 0) {
             console.log('4의 배수');
           } else if ((num1 + num2) % 4 !== 0) {
@@ -85,6 +85,19 @@
           console.log('Not a Number');
         }
       }
+
+      // function diceNumber(first, secound)
+      // if (typeof first === 'number' && typeof secound ==='number'){
+      //   const result = first + second;
+      //   if (result % 4 === 0){
+      //     console.log('4의 배수');
+      //   } else{
+      //     console.log('4의 배수가 아님')
+      //   }
+      // } else {
+      //   console.log('Not a Number');
+      // }
+      // isNaN() <- 숫자로 자기 마음대로 반환함.
 
       // TODO: 해당 html 파일을 실행한 브라우저 콘솔창에서 diceNumber 함수를 호출해주세요!
       console.log('diceNumber(1, 2)');
