@@ -262,7 +262,7 @@ console.log(sum1);
 let sum2 = 0;
 // numArr 배열에 있는 모든 요소를 num이라고 지칭하면서 반복한다.
 for (let num of numArr) {
-  sum2 = sum + num;
+  sum2 = sum2 + num;
   //sum2 += num;
 }
 

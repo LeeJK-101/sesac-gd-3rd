@@ -128,6 +128,8 @@ console.log(pEl); // 콘솔에서만 존재하는 유령같은 친구 pEl
 // append: 선택된 요소의 자식 요소로 매개변수 요소가 삽입됨
 // 마지막 자식 요소로 추가됨.
 // 여러 자식요소 한 번에 삽입 가능
+// 텍스트 삽입 가능
+// 부모요소.apend(추가될 자식 요소)
 container.append(pEl);
 
 const pEl2 = document.createElement('p');
@@ -150,9 +152,99 @@ for (let i = 0; i < 3; i++) {
 
 // 어떤 요소를 만들고 받아올 때 서버에서 받아옵니다.
 // 배열 안에 객체로 들어간다.
-
+// 예를 들면
 // [
 //   { id: 1, name: 마우스 },
 //   { id: 2, name: 키보드 },
 //   { id: 3, name: 모니터 },
 // ];
+
+// append 사용해 텍스트 삽입
+const p1 = document.createElement('p');
+
+p1.innerHTML = '0306 추가된 p태그입니다. ';
+// p1.innerText = '0306 추가된 p태그입니다. '; //<- 같은 내용
+// p1.append('0306 추가된 p태그입니다. '); // <- 같은 내용
+
+container.append(p1, '이건 그냥 텍스트 넣은 거예요.');
+
+// appendChild()
+// 선택된 요소의 자식요소로 매개변수 요소가 추가되는데, 가장 뒤에 자식요소로 추가됨
+// 한 번에 하나의 요소만 추가할 수 있음
+
+const p2 = document.createElement('p');
+p2.innerText = 'appendChild 사용해서 추가할 첫 번째 p태그';
+const p3 = document.createElement('p');
+p3.innerText = 'appendChild 사용해서 추가할 두 번째 p태그';
+const p4 = document.createElement('p');
+p4.innerText = 'appendChild 사용해서 추가할 세 번째 p태그';
+
+container.appendChild(p2);
+container.appendChild(p3);
+container.appendChild(p4);
+// container.append(p2, p3, p4); // 위의 3줄과 동일한 기능
+// container.appendChild(p3, p4); // p4는 추가되지 않음
+// container.appendChild('과연 될까요?'); // 텍스트 추가 안됨
+
+// pretend()
+// 선택된 요소의 자식으로 추가될 때, 가장 첫 번째 자식으로 추가됨
+// append와 반대
+
+const div2 = document.createElement('div');
+div2.classList.add('prepend');
+div2.innerText = 'pretend로 추가한 첫 번째 요소';
+
+container.prepend(div2);
+
+const div3 = document.createElement('div');
+div3.classList.add('prepend');
+div3.innerText = 'pretend로 추가한 두 번째 요소';
+
+container.prepend(div3);
+
+// before, after
+// before : 선택된 요소의 앞에 추가됨
+// prepend
+const h1 = document.querySelector('#h1');
+const h3 = document.createElement('h3');
+h3.innerText = 'before로 추가한 h3';
+
+h1.before(h3);
+
+// after : 선택된 요소의 뒤에 추가됨
+const h2 = document.createElement('h2');
+h2.innerText = 'after로 추가한 h2';
+
+h1.after(h2);
+
+/* 
+ 요소 다루기
+ - document.creatElement(태그명) : 해당 태그 생성
+   - 요소를 만드는 것이기 때문에 브라우저에서는 확인 할 수 없음
+ - 부모.append(자식요소) : 자식 요소를 부모요소의 자식으로 마지막 자식으로 추가
+   - 여러개의 요소 한 번에 추가 가능
+   - 텍스트 추가 가능 -> 부모요소의 content로 들어감
+ - 부모.appendChild(자식요소) : 자식 요소를 부모요소의 자식으로 마지막 자식으로 추가
+    - 한번에 하나의 요소만 추가 가능
+    - 텍스트 추가 불가
+ - 부모.prepend(자식요소) : 자식 요소를 부모요소의 첫 번째 자식으로 추가
+ - 요소.before(추가할 요소) : 선택된 요소의 앞에 추가할 요소가 추가 (형제요소로)
+ - 요소.after(추가할 요소) : 선택된 요소의 뒤에 추가할 요소가 추가 (형제요소로)
+
+
+ append, appendChild, prepend -> 선택된 요소의 자식으로 인자로 전달한 자식을 추가
+ before, after -> 선택된 요소의 자식으로 인자로 전달한 자식을 추가
+
+
+
+*/
+
+// 요소 삭제
+
+const deleteDiv = document.querySelector('.container div');
+deleteDiv.remove(); // 선택한 요소 삭제
+
+// #flower의 두 번째 li인 장미 삭제하기
+const rose = document.querySelector('#flower li:nth-child(2)');
+console.log(rose);
+rose.remove();
