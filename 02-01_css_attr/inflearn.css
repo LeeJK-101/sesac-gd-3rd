@@ -1,0 +1,120 @@
+body {
+  height: 2000px;
+}
+header {
+  position: sticky;
+  top: 0;
+}
+.header_inner {
+  font-size: 14px;
+  position: relative;
+}
+.header_top {
+  border-bottom: 1px solid rgb(208, 208, 208);
+  font-size: 14px;
+}
+.top_width {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+  /* padding: 0 32px; */
+}
+.top_width ul {
+  display: flex;
+  margin: 32px;
+  align-items: center;
+}
+.link_service {
+  width: 130px;
+  justify-content: space-around;
+}
+.link_service li {
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+}
+.link_service li::before {
+  content: "    ";
+  background: url(img/brand_logo.png) no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+}
+.header_top ul li:nth-of-type(2) {
+  border-left: 1px solid rgb(214, 214, 214);
+}
+.header_top ul li {
+  padding: 0 5px;
+}
+.header_bottom {
+  border-bottom: 1px solid rgb(208, 208, 208);
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 2px rgb(230, 230, 230);
+}
+.bottom_width {
+  height: 64px;
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 100px;
+  align-items: center;
+}
+h1 img {
+  width: 110px;
+  margin-left: 36px;
+}
+.nav_li {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  flex-shrink: 0;
+}
+.nav_li :hover span {
+  color: green;
+}
+#search {
+  width: 500px;
+  height: 34px;
+  margin-right: 20px;
+  border-radius: 10px;
+  background: url(img/search.png) no-repeat center right 10px;
+  background-size: 20px;
+  background-color: rgb(241, 241, 241);
+  border: none;
+}
+#search:focus {
+  outline: 2px solid rgb(0, 210, 0);
+}
+#search:not(#search:focus):hover {
+  border: 1px solid black;
+}
+.btn {
+  margin-right: 36px;
+  width: 130px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+#primary {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(218, 218, 218);
+}
+#sign_in {
+  background-color: rgb(249, 87, 43);
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid rgb(218, 218, 218);
+}

@@ -69,6 +69,6 @@ $('input[name=pw]').keydown((e) => {
 // keyup 이벤트
 // on() : 이벤트 걸겠다. addEventListener와 비슷
 
-$('input[name=pw').on('keyup', (e) => {
+$('input[name=pw]').on('keyup', (e) => {
   console.log('e.key', e.key);
 });
