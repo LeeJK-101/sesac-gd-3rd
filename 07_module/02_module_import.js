@@ -42,3 +42,4 @@ import sayStatus2 from './03_module.js';
 sayStatus2('sleepy');
 sayStatus2('hungry');
 sayStatus2('boring');
+np;
