@@ -5,8 +5,8 @@ import './App.css';
 import FoodProps from './components/FoodProps';
 import BookProps from './components/BookProps';
 
-import ProductList from './components/ProductList';
-
+import ProductItem from './components/ProductItem';
+import ProductContainer from './components/ProductContainer';
 function App() {
   const sayHi = () => {
     alert('안녕?');
@@ -81,61 +81,48 @@ function App() {
   return (
     <div className='app'>
       {/* <FuncProps weather='sunny' feeling='happy' /> */}
-
       {/* defaultProps 사용 */}
       {/* <FuncProps feeling={true} /> */}
-
       {/* propsTypes 사용 */}
       {/* props로 전달하는 값이 문자열인 경우 ''(따옴표)로 감싸 전달 */}
       {/* 이외의 데이터 타입은 {}(중괄호)로 감싸 전달 */}
       {/* <FuncProps feeling='exciting' date='240402' /> */}
-
       {/* props.children */}
       {/* 문자열 전달 */}
       {/* <FuncProps>안녕?</FuncProps> */}
-
       {/* 함수 전달 */}
       {/* <FuncProps>{sayHi}</FuncProps> */}
-
       {/* 요소전달 */}
       {/* <FuncProps>
         <div>안녕안녕</div>
         <div>자니?</div>
       </FuncProps> */}
-
       {/* ------------------------------------ */}
       {/* class 컴포넌트에서의 props 사용 */}
       {/* <ClassProps drink='아메리카노' payment='카드' price={4000} /> */}
-
       {/* default props 사용 */}
       {/* <ClassProps drink='아인슈페너' payment='현금' /> */}
-
       {/* PropTypes 사용 */}
       {/* <ClassProps drink='카페라떼' payment='현금' /> */}
-
       {/* isRequired 사용 */}
       {/* <ClassProps drink='레몬에이드' /> */}
-
       {/* ------------------------------------ */}
-      {/* 코딩온 실습 food props*/}
+      코딩온 실습 food props
       {/* <FoodProps food='파스타' /> */}
-
       {/* <div style={{ padding: 50, backgroundColor: 'beige' }}>
-        <div style={{ color: 'orange', fontSize: 20, fontWeight: 900 }}>
-          이번주 베스트 셀러
-        </div>
         <BookProps
-          title='나의 하루는 4시 40분에 시작된다'
-          author='김유진'
-          price={13500}
+          title='바람의 열두방향'
+          author='어슐러 k 르귄'
+          price={14000}
           type='자기계발서'
         />
       </div> */}
-
       {/* 연습 */}
-      {products.map((prod) => (
-        <ProductList prodData={prod} />
-      ))}
+      {/* {products.map((prod) => (
+        <ProductItem prodData={prod} key={prod.id} />
+      ))} */}
+      {/* 연습 develop */}
+      <ProductContainer products={products} />
     </div>
   );
 }
