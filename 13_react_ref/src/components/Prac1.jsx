@@ -29,6 +29,10 @@ export default function Prac1() {
   // 그렇게 때문에 data.lenth -> data 배열의 길이에 1을 더해 직접 id값을 만듬
   const [nextId, setNextId] = useState(data.length + 1); // useState(3)
 
+  //input focus를 위한 ref 생성
+  const userInputRef = useRef();
+  const emailInputRef = useRef();
+
   // 사용자의 이름을 받는 input에 변경사항이 있을 때 실행되는 함수
   // onChange로 연결 되어 있으며 해당 함수가 실행될 때
   // 해당 이벤트가 발생한 input의 value를 inputUser State의 값으로 업데이트함
@@ -43,11 +47,32 @@ export default function Prac1() {
   // e.target.value : 현재 이벤트가 발생한 input 요소의 value 속성값
   const onChangeEmail = (e) => setInputEmail(e.target.value);
 
+  //validation 로직
+  // if 두개 하면 둘다 돌아감.
+  // trim()은 앞뒤 공백을 다 없애버림
+  const validation = () => {
+    if (inputUser.trim().length === 0) {
+      userInputRef.current.focus();
+
+      return false;
+    }
+    if (inputEmail.trim().length === 0) {
+      emailInputRef.current.focus();
+
+      return false;
+    }
+    return true;
+  };
+
   // eventClick 함수 설명
   // email을 입력받는 input에 onKeyDown 속성과 등록 버튼의 onClick 속성에서 사용됨
   //새로운 데이터를 data state에 추가, input 2개(user, email)를 초기화, nextId state를 1 더한 값으로 업데이트
 
   const eventClick = () => {
+    if (!validation) {
+      return; //validation 이 false값이면 return쓰면 빠져나감. return은 그 함수가 끝나는 것.
+    }
+
     // 새로운 데이터를 기존 데이터 배열에 추가
     // 방법 1. concat
     // 참고) concat(): https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
@@ -117,6 +142,7 @@ export default function Prac1() {
       <input
         type='text'
         name='user'
+        ref={userInputRef}
         placeholder='이름'
         value={inputUser}
         onChange={onChangeUser}
@@ -124,6 +150,7 @@ export default function Prac1() {
       <input
         type='text'
         name='email'
+        ref={emailInputRef}
         placeholder='이메일'
         value={inputEmail}
         onChange={onChangeEmail}
