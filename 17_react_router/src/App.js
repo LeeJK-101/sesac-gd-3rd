@@ -33,15 +33,19 @@ function App() {
 
       {/* 라우팅 하기 */}
       {/* home */}
-      {/* ProductPage 컴포넌트 경로: /prodcuts */}
-      {/* ProductDetailPage 컴포넌트 경로: /prodcuts/1 */}
+      {/* ProductPage 컴포넌트 경로: /products */}
+      {/* ProductDetailPage 컴포넌트 경로: /products/1 */}
       {/* ProductPage 컴포넌트 경로: /photos */}
       {/* 이외 모든 페이지 NotFound 컴포넌트 */}
 
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<ProductPage />} />
-        <Route path='/products/1' element={<ProductDetailPage />} />
+
+        {/* <Route path='/products/1' element={<ProductDetailPage />} /> */}
+        {/* 파라미터로 작성 */}
+        <Route path='/products/:productId' element={<ProductDetailPage />} />
+
         <Route path='/photos' element={<PhotoPage />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
