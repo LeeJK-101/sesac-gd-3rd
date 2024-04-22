@@ -1,4 +1,5 @@
 import '../styles/sass.scss';
+import { className } from 'classname';
 
 export default function Sass() {
   return (
@@ -29,6 +30,10 @@ export default function Sass() {
       </div>
 
       <div className='sass-use-if'>sass if문 사용</div>
+
+      <div className='sass-util'>utils import</div>
+      <div className='sass-util-btn'>utils btn</div>
+      <div></div>
     </>
   );
 }
